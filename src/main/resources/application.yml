@@ -1,0 +1,39 @@
+
+# use port 9002 by default to support existing  configurations
+server.port: 9002
+
+# enable health and prometheus endpoints:
+management:
+  endpoint:
+    # manage/health
+    health.enabled: true
+    # manage/prometheus
+    prometheus.enabled: true
+  endpoints:
+    # Lets disable everything by default
+    enabled-by-default: false
+    web:
+      exposure.include: '*'
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/challengedb
+    username: challenge
+    password: password
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show-sql: true
+        format_sql: true
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type=: trace

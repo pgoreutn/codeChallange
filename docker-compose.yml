@@ -1,24 +1,27 @@
 version: '3'
 services:
-  challenge-mysql:
-    container_name: challenge-mysql
+  mysql_db:
+
     build: ./docker/mysql
+    restart: always
+    ports:
+      - 3307:3306
     environment:
-      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: challengedb
       MYSQL_USER: challenge
       MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: password
     networks:
       - challenge-network
     volumes:
       - challenge-db-volume:/data
 
-
 volumes:
   challenge-db-volume:
-
 networks:
   challenge-network:
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24

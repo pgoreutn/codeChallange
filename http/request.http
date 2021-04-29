@@ -1,0 +1,5 @@
+POST http://localhost:9002/product
+accept: application/json
+Content-Type: application/json
+
+{"name":"Anteojos de Sol1","description":"Anteojos de Sol","weight":20.4,"price":350.99,"country":"argentina"}

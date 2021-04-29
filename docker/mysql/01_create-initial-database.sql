@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS PRODUCT
+CREATE TABLE IF NOT EXISTS product
 (
     id              binary(16)    not null,
     name            varchar(150)  not null,
@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS PRODUCT
     updated_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
  );
 
-ALTER TABLE  PRODUCT
+ALTER TABLE  product
     ADD CONSTRAINT  PRIMARY KEY (id);
 
-ALTER TABLE PRODUCT
+ALTER TABLE product
     ADD CONSTRAINT UNIQUE (name);

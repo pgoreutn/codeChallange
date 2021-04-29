@@ -1,8 +1,6 @@
 package com.pablogore.code.controller;
 
 
-import com.pablogore.code.dto.ImmutableProduct;
-import com.pablogore.code.dto.ImmutableProductResponse;
 import com.pablogore.code.dto.Product;
 import com.pablogore.code.dto.ProductResponse;
 import com.pablogore.code.service.ProductService;
@@ -13,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.UUID;
 
 /**
  * REST Controller for all product functionality i. 

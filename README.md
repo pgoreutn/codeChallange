@@ -2,7 +2,7 @@
 Run the solution:
 ---------------------
 ```
-docker-compose up -d 
+docker-compose up -d  (up  a database mysql)
 ./gradle clean build
 ./gradlew bootRun
 ```

@@ -1,7 +1,8 @@
 
 Run the solution:
 ---------------------
-```docker-compose up -d 
+```
+docker-compose up -d 
 ./gradle clean build
 ./gradlew bootRun
 ```

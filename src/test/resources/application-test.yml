@@ -1,0 +1,18 @@
+spring:
+
+  datasource:
+    url: jdbc:tc:mysql:///challenge?TC_DAEMON=true&user=root&password=&?TC_INITSCRIPT=testdata.sql
+    hikari:
+      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+      jdbc-url: jdbc:tc:mysql:///challenge?TC_DAEMON=true&user=root&password=&?TC_INITSCRIPT=testdata.sql
+
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        generate_statistics: true

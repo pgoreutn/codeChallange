@@ -11,7 +11,7 @@ import org.springframework.lang.Nullable;
 @JsonSerialize(as = ImmutableProduct.class)
 @JsonDeserialize(as = ImmutableProduct.class)
 @Value.Immutable
-public abstract class Product {
+public interface Product {
     @Nullable
     @JsonProperty("name")
     public abstract String getName();

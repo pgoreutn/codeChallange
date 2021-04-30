@@ -19,6 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation "io.springfox:springfox-boot-starter:3.0.0"
+	implementation 'junit:junit:4.12'
 
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
@@ -33,13 +34,31 @@ dependencies {
 
 	compile 'org.mapstruct:mapstruct:1.4.2.Final'
 	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
-
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
-
 	runtimeOnly 	"mysql:mysql-connector-java"
-	testImplementation  "com.h2database:h2"
 
+
+	testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+
+	// Use JUnit Jupiter API for testing.
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+
+	// Use JUnit Jupiter Engine for testing.
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+
+	testImplementation 'org.junit.jupiter:junit-jupiter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.testcontainers:testcontainers:1.15.2'
+	// For @Testcontainers and @Container annotations within test-case
+	testImplementation 'org.testcontainers:junit-jupiter:1.15.2'
+	implementation platform('org.testcontainers:testcontainers-bom:1.15.2') //import bom
+
+	// For MySQL TestContainer
+	testImplementation('org.testcontainers:mysql') //no version specified
+	runtimeOnly 'com.h2database:h2'
+
+
 }
 
 java {

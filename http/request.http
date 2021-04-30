@@ -2,4 +2,22 @@ POST http://localhost:9002/product
 accept: application/json
 Content-Type: application/json
 
-{"name":"Anteojos de Sol1","description":"Anteojos de Sol","weight":20.4,"price":350.99,"country":"argentina"}
+{"name":"Anteojos","description":"Anteojos de Sol","weight":20.4,"price":350.99,"country":"argentina"}
+
+###
+PUT http://localhost:9002/product
+accept: application/json
+Content-Type: application/json
+
+{"name":"Anteojos de Sol1","description":"Anteojos de Sol UPDATE","weight":20.4,"price":350.99,"country":"argentina"}
+
+###
+DELETE http://localhost:9002/product/Anteojos
+Content-Type: application/json
+
+
+###
+GET http://localhost:9002/product?pageNo=10&pageSize=20
+accept: application/json
+Content-Type: application/json
+

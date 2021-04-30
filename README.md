@@ -1,10 +1,10 @@
 
 Run the solution:
 ---------------------
-docker-compose up -d 
+```docker-compose up -d 
 ./gradle clean build
 ./gradlew bootRun
-
+```
 By the way , inside the folder http you could have some curl/http examples.
 
 ask Description:
